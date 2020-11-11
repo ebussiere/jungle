@@ -16,6 +16,11 @@
       Details &raquo;
     <% end %>
   </footer>
+<% if product.quantity == 0 %>
+<aside class="soldout">
+    SOLD OUT!
+  </aside>
+<% end  %>
 
   <aside class="price">
     <%= number_to_currency(product.price) %>
