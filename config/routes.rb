@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
-
+  # get "/pages/about" => "pages#about"
+  get 'pages/about', to: 'pages#about', as: :pages
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
